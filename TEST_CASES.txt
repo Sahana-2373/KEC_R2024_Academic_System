@@ -1,0 +1,40 @@
+TEST CASES — KEC R2024 ACADEMIC SYSTEM
+
+1. Add student
+Input: 24ITR010, Test Student, IT, semester 3
+Expected: Student added successfully.
+
+2. Add THEORY course
+Input: 24ITR99, Test Theory, 3 credits, THEORY
+Expected: Course added successfully.
+
+3. Enrollment and attendance >=75%
+Input: 40 held, 32 attended (80%), no condonation
+Expected: Eligible for ESE.
+
+4. Attendance between 65% and 75%, no condonation
+Input: 40 held, 28 attended (70%), condonation no
+Expected: Condonation pending; treated as SA by this prototype.
+
+5. Attendance below 65%
+Input: 40 held, 24 attended (60%)
+Expected: SA / barred from ESE; listed in defaulter report.
+
+6. Incremental marks
+Enter CIA1 and CIA2 in Phase 1; then assignment/quiz/lab in Phase 2.
+Expected: earlier values are preserved when later phases are saved.
+
+7. ESE absence
+Phase 3: answer yes to absent.
+Expected: grade AB, 0 grade points.
+
+8. ESE below minimum
+THEORY ESE raw mark 40 with sufficient attendance.
+Expected: grade RA, regardless of aggregate.
+
+9. Overall aggregate below 50
+Expected: grade RA.
+
+10. Passing mark sheet
+Enter eligible attendance and passing CIA/ESE marks.
+Expected: grade determined by total, SGPA and percentage printed.
