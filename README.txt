@@ -1,270 +1,197 @@
-# KEC R2024 Student Academic & Continuous Evaluation System
+<div align="center">
 
-**Java JDBC + MySQL \| Menu-driven console application**
+# KEC R2024 Academic Evaluation System
 
-------------------------------------------------------------------------
+### A Java + JDBC + MySQL Academic Management Application
 
-## Student Profile
+Manage student records, course enrollment, attendance, assessment marks, semester results, and academic reports through a menu-driven console application.
 
-  -----------------------------------------------------------------------
-  Detail                              Information
-  ----------------------------------- -----------------------------------
-  **Name**                            Sahana S
+<br>
 
-  **College**                         Kongu Engineering College
+![Java](https://img.shields.io/badge/Java-JDBC-F89820?style=for-the-badge&logo=openjdk&logoColor=white)
+![MySQL](https://img.shields.io/badge/MySQL-8.0-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
+![Interface](https://img.shields.io/badge/Interface-Console-475569?style=for-the-badge)
+![Academic Project](https://img.shields.io/badge/Project-KEC%20R2024-166534?style=for-the-badge)
 
-  **Programme**                       B.Tech -- Information Technology
+</div>
 
-  **Academic Level**                  Second-Year Student
+---
 
-  **Project Title**                   Development of Kongu Engineering
-                                      College (R2024) Student Academic &
-                                      Continuous Evaluation System
+## Project Overview
 
-  **Technologies**                    Java, JDBC, MySQL
-  -----------------------------------------------------------------------
+The **KEC R2024 Academic Evaluation System** is a database-driven Java application developed to organize essential academic information in one place. It connects to a MySQL database through **Java Database Connectivity (JDBC)** and provides a menu-based interface for carrying out common academic operations.
 
-### Technical Skills
+The project demonstrates practical use of Java, relational database design, SQL operations, and JDBC connectivity in an academic management scenario.
 
--   C Programming
--   C++
--   Java
--   HTML
--   Problem Solving
+> **Academic use:** This is a student project. Verify all evaluation formulas, attendance thresholds, condonation rules, and grade boundaries against the applicable official regulations before treating generated results as authoritative.
 
-### Coding Profiles
+## Key Features
 
--   **GitHub:** [Sahana-2373](https://github.com/Sahana-2373)
--   **LeetCode:** [sahana_S2373](https://leetcode.com/sahana_S2373/)
+| Module | Capabilities |
+|---|---|
+| **Student Management** | Add and view student records, including roll number, name, department, and semester. |
+| **Course Management** | Maintain course codes, titles, credits, and course types. |
+| **Enrollment** | Associate students with courses through enrollment records. |
+| **Attendance** | Record attendance information and support attendance-related reporting. |
+| **Assessment Entry** | Maintain CIA 1, CIA 2, assignment, quiz, laboratory, and ESE marks. |
+| **Examination Status** | Record ESE absence information when applicable. |
+| **Semester Mark Sheet** | Retrieve assessment details and display available academic results. |
+| **Attendance Defaulters** | Identify students below the attendance threshold configured in the application. |
+| **Department Summary** | Display department-wise performance information supported by the implementation. |
 
-------------------------------------------------------------------------
+## Technology Stack
 
-## 1. Project Overview
+| Technology | Purpose |
+|---|---|
+| **Java** | Application logic and menu-driven user interface |
+| **MySQL 8** | Relational storage for academic records |
+| **JDBC / MySQL Connector/J** | Communication between Java and MySQL |
+| **Visual Studio Code** | Development and terminal-based execution |
 
-The **KEC R2024 Student Academic & Continuous Evaluation System** is a
-menu-driven Java console application that uses JDBC to communicate with
-a MySQL database. It is a student project prototype for managing student
-details, course information, enrollment, attendance, assessment marks,
-and semester performance reports.
+## Project Structure
 
-## 2. Objectives
-
--   Maintain student registration details.
--   Store course information, including course code, title, credits, and
-    course type.
--   Manage course enrollment and attendance records.
--   Enter and update assessment marks incrementally.
--   Evaluate academic performance using the rules configured in the
-    application.
--   Generate semester mark sheets, attendance-defaulter lists, and
-    department result summaries.
--   Calculate grade points and SGPA for enrolled courses.
-
-## 3. Main Features
-
--   **Student Management:** Register and maintain student records.
--   **Course Catalog:** Store theory, practical, and embedded courses.
--   **Enrollment:** Associate students with courses and semesters.
--   **Attendance Tracking:** Record classes held and attended and
-    calculate attendance percentage.
--   **Assessment Entry:** Maintain CIA and End Semester Examination
-    (ESE) marks.
--   **Evaluation:** Determine result status and grade point using the
-    implemented rules.
--   **Reports:** Display academic results, attendance information, and
-    semester summaries.
-
-## 4. Technology Stack
-
-  -----------------------------------------------------------------------
-  Technology                          Purpose
-  ----------------------------------- -----------------------------------
-  Java                                Application logic and menu-driven
-                                      interface
-
-  JDBC                                Connection between Java and MySQL
-
-  MySQL Server                        Persistent database
-
-  MySQL Command Line Client           Running SQL commands and checking
-                                      records
-
-  Visual Studio Code                  Editing and running Java source
-                                      code
-
-  JDK                                 Compiling and executing the
-                                      application
-  -----------------------------------------------------------------------
-
-## 5. Project Structure
-
-``` text
+```text
 KEC_R2024_Academic_System/
 ├── src/
 │   ├── DBConnection.java
 │   ├── StudentDAO.java
 │   ├── AcademicDAO.java
-│   └── MainApp.java
-├── kec_schema.sql
-├── kec_sample_data.sql
+│   ├── MainApp.java
+│   └── mysql-connector-j-26.7.0.jar
+├── out/                    # Compiled classes (generated)
+├── kec_schema.sql          # Database schema, if included in your project
+├── kec_sample_data.sql     # Sample data, if included in your project
 ├── README.md
 └── TEST_CASES.txt
 ```
 
--   `DBConnection.java` --- establishes the JDBC connection to MySQL.
--   `StudentDAO.java` --- handles student-related database operations.
--   `AcademicDAO.java` --- handles course, enrollment, attendance,
-    assessment, and reporting operations.
--   `MainApp.java` --- displays the menu and coordinates user actions.
--   `kec_schema.sql` --- creates the database tables and structure.
--   `kec_sample_data.sql` --- inserts sample records for testing.
--   `TEST_CASES.txt` --- provides example test scenarios.
+*The SQL filenames above are examples. Keep only filenames that actually exist in your repository. The Connector/J JAR path should match your current project setup.*
 
-## 6. Prerequisites
+## Requirements
 
-Install the following on Windows:
+Before running the application, make sure you have:
 
-1.  **Java Development Kit (JDK)**.
-2.  **MySQL Server**.
-3.  **MySQL Connector/J** JDBC driver.
-4.  **Visual Studio Code** (recommended editor).
+- A Java Development Kit (JDK) installed.
+- MySQL Server installed and running.
+- MySQL Connector/J available in the project.
+- Visual Studio Code or another terminal that can run Java commands.
 
-Check Java from the VS Code terminal:
+Check Java installation from the VS Code terminal:
 
-``` powershell
+```powershell
 java -version
 javac -version
 ```
 
-Both commands should display a version number.
+## Setup and Run on Windows
 
-## 7. Database Setup
+### 1. Open the project
 
-1.  Start the MySQL Server service.
-2.  Open MySQL Command Line Client and sign in.
-3.  Create and select the project database:
+Open the `KEC_R2024_Academic_System` folder in Visual Studio Code, then open **Terminal → New Terminal**.
 
-``` sql
-CREATE DATABASE kec_academic_system;
-USE kec_academic_system;
+### 2. Prepare the database
+
+Connect to MySQL:
+
+```powershell
+mysql -u root -p
 ```
 
-4.  Run `kec_schema.sql` to create the tables.
-5.  Run `kec_sample_data.sql` to insert sample records.
+At the MySQL prompt, select the database:
 
-Run the SQL files from the extracted project folder. If the files
-already contain `CREATE DATABASE` or `USE` statements, follow those
-statements and avoid creating conflicting duplicate databases.
-
-## 8. Configure JDBC
-
-Open `src/DBConnection.java` and set the connection URL, username, and
-password to match your local MySQL installation. A typical local URL is:
-
-``` text
-jdbc:mysql://localhost:3306/kec_academic_system
+```sql
+CREATE DATABASE IF NOT EXISTS kec_academic;
+USE kec_academic;
 ```
 
-Use your own MySQL credentials. **Never commit your real database
-password to a public repository.** For a public version, use environment
-variables or a local configuration file excluded from version control.
+Run your project's SQL schema script if one is included. If the schema already creates the database and tables, follow that script's instructions rather than creating duplicate tables.
 
-Ensure the MySQL Connector/J JAR is available and included in the Java
-classpath. Use a driver version compatible with your installed Java
-version.
+### 3. Configure the database connection
 
-## 9. Run in VS Code
+Open `src/DBConnection.java` and confirm that the JDBC URL, database name, username, and password match your local MySQL setup.
 
-1.  Open the extracted `KEC_R2024_Academic_System` folder in VS Code.
-2.  Confirm the JDK is installed and MySQL Server is running.
-3.  Configure `DBConnection.java`.
-4.  Make sure the Connector/J JAR is available.
-5.  Open **Terminal → New Terminal** in VS Code.
-6.  Compile the source files, replacing the JAR path and version with
-    your actual file:
+Example JDBC URL:
 
-``` powershell
-javac -cp ".;lib\mysql-connector-j-<version>.jar" -d out src\*.java
+```java
+jdbc:mysql://localhost:3306/kec_academic
 ```
 
-Run the application:
+**Security note:** Never commit your real database password to GitHub. Use a local-only configuration or environment variables for credentials, and keep private configuration files out of version control.
 
-``` powershell
-java -cp ".;out;lib\mysql-connector-j-<version>.jar" MainApp
+### 4. Compile the Java source files
+
+Run the following command from the project root in the VS Code PowerShell terminal. It uses the Connector/J JAR path from the current project setup.
+
+```powershell
+javac -cp ".;src\mysql-connector-j-26.7.0.jar" -d out src\DBConnection.java src\StudentDAO.java src\AcademicDAO.java src\MainApp.java
 ```
 
-Update the classpath if the JAR is stored elsewhere. If the project uses
-a package declaration, adjust the run command to match it. When the
-program starts successfully, the menu-driven interface appears in the VS
-Code terminal.
+### 5. Launch the application
 
-## 10. Academic Evaluation Rules
+```powershell
+java -cp ".;out;src\mysql-connector-j-26.7.0.jar" MainApp
+```
 
-The prototype supports **THEORY**, **PRACTICAL**, and **EMBEDDED**
-course types and applies the assessment and grade rules implemented in
-its Java source code. Verify CIA calculations, ESE minimums,
-attendance-condonation rules, grade boundaries, and SGPA calculations
-against the current official KEC R2024 regulations before using them for
-academic decisions.
+The main menu should appear in the terminal. Enter the number corresponding to the operation you want to perform.
 
-Attendance eligibility is based on the thresholds configured in the
-application.
+## Database Overview
 
-> **Academic disclaimer:** This is a student project prototype for
-> learning and demonstration. It is not an official KEC academic system,
-> and its output must not be treated as an official result or regulation
-> document.
+The application uses MySQL to persist academic information. The principal entities include:
 
-## 11. Reports
+- **Students** — student identity and academic details.
+- **Courses** — course identifiers, titles, credits, and types.
+- **Enrollments** — links between students and courses.
+- **Assessment Marks** — internal assessment, assignment, quiz, laboratory, and ESE results, including ESE absence status.
 
--   Student semester mark sheet.
--   Attendance-defaulter information.
--   Department-level result summary.
--   Grade points and SGPA based on recorded results and enrolled course
-    credits.
+The exact columns, constraints, and relationships are defined by the SQL schema used by your project. Refer to that schema for the authoritative database structure.
 
-Report accuracy depends on the database records and evaluation rules
-configured in the source code.
+## Testing Checklist
 
-## 12. Testing
+Use `TEST_CASES.txt` if it is present in the repository. Useful manual checks include:
 
-Use `TEST_CASES.txt` for example scenarios. Test with sample data before
-entering real student information.
+- Add a student and verify that the record is stored.
+- Add a course and confirm it appears in the course list.
+- Enroll a student in a course.
+- Enter assessment marks and verify that the saved values can be retrieved.
+- Check mark sheet generation using known test data.
+- Test attendance reporting with records on both sides of the configured threshold.
+- Test ESE absence handling, where supported.
+- Restart the application and verify that saved records remain in MySQL.
 
-Recommended checks: - Register a student and verify the record in
-MySQL. - Add or view course details. - Enroll a student in a course. -
-Enter attendance and assessment marks. - Generate a semester mark
-sheet. - Verify grade, result status, and SGPA. - Check
-attendance-defaulter and department-summary reports.
+## Troubleshooting
 
-## 13. Future Enhancements
+| Problem | What to check |
+|---|---|
+| `mysql` is not recognized | Add the MySQL `bin` directory to `PATH`, or run `mysql.exe` using its full path. |
+| `No suitable driver` | Confirm that the Connector/J JAR exists and is included in the classpath. |
+| `Communications link failure` | Check that MySQL Server is running and the host and port are correct. |
+| `Access denied` | Verify the MySQL username and password configured in `DBConnection.java`. |
+| `Unknown database 'kec_academic'` | Create the database and execute the required schema script. |
+| `ClassNotFoundException: MainApp` | Compile successfully and ensure `out` is included in the runtime classpath. |
+| Table or column errors | Confirm that the database schema matches the SQL statements used by the Java source files. |
 
--   Graphical or web-based interface.
--   Secure role-based login for administrators and faculty.
--   Stronger input validation and clearer error messages.
--   PDF or Excel report export.
--   Audit history for marks and attendance changes.
--   Automated tests.
--   External configuration for credentials and institution-specific
-    rules.
+## Potential Enhancements
 
-## 14. Learning Outcomes
-
-This project provides practice in: - Java programming and menu-driven
-application design. - JDBC connectivity and database CRUD operations. -
-Relational database design using MySQL. - Data Access Object (DAO)
-organisation. - Academic calculations, validation, and report
-generation. - Testing and documenting a database-backed application.
-
-------------------------------------------------------------------------
+- Add secure login and role-based access.
+- Introduce a graphical or web-based interface.
+- Export mark sheets and reports to PDF or Excel.
+- Add automated unit and integration tests.
+- Move database credentials to environment-based configuration.
+- Improve validation and error messages for user input.
 
 ## Author
 
-**Sahana S**\
-B.Tech Information Technology Student\
+**Sahana S**  
+B.Tech — Information Technology  
 Kongu Engineering College
 
--   GitHub: https://github.com/Sahana-2373
--   LeetCode: https://leetcode.com/sahana_S2373/
+- **GitHub:** [Sahana-2373](https://github.com/Sahana-2373)
+- **LeetCode:** [sahana_S2373](https://leetcode.com/sahana_S2373/)
 
-*Developed for academic learning and project demonstration.*
+---
+
+<div align="center">
+
+*Developed as an academic project to practice Java programming, JDBC connectivity, SQL, and database-backed application development.*
+
+</div>
