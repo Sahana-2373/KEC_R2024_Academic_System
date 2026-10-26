@@ -9,15 +9,15 @@
   -----------------------------------------------------------------------
   Detail                              Information
   ----------------------------------- -----------------------------------
-  **Name**                            Sahana S
+  **Name:**                            Sahana S
 
-  **College**                         Kongu Engineering College
+  **College:**                         Kongu Engineering College
 
-  **Programme**                       B.Tech -- Information Technology
+  **Programme:**                       B.Tech -- Information Technology
 
-  **Academic Level**                  Second-Year Student
+  **Academic Level:**                  Second-Year Student
 
-  **Project Title**                   Development of Kongu Engineering
+  **Project Title:**                   Development of Kongu Engineering
                                       College (R2024) Student Academic &
                                       Continuous Evaluation System
 
